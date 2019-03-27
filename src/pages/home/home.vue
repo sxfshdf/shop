@@ -1,5 +1,7 @@
 <template>
-  <div class="home">hello</div>
+  <div class="home">
+    <Swiper></Swiper>
+  </div>
 </template>
 
 <script src="./home.js">
