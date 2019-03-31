@@ -40,6 +40,11 @@
         //   el: '.swiper-pagination',
         //   type: 'fraction',
         // },
+        // spaceBetween: 30,
+        // effect: 'fade',
+        // fadeEffect: {
+        //   crossFade: true
+        // },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',

@@ -1,9 +1,14 @@
 
-import Swiper from '../../components/Swiper.vue';
+import HeadSwiper from '../../components/HeadSwiper.vue';
+import HomeBodySwiper from '../../components/HomeBodySwiper.vue';
 
 export default {
   name: "home",
   components: {
-    Swiper
+    HeadSwiper,
+    HomeBodySwiper
+  },
+  mounted() {
+
   }
 }

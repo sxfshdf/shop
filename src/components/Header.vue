@@ -15,6 +15,7 @@
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-shopping"></use>
           </svg>
+          <span class="num">10</span>
         </div>
         <div class="action user">
           <svg class="icon" aria-hidden="true">
@@ -49,10 +50,34 @@
         display: flex;
         align-items: center;
         .action {
-          margin-left: 24px;
+          margin-left: 20px;
           .icon {
             height: 20px;
             width: 20px;
+          }
+        }
+        .user, .cart {
+          height: 32px;
+          width: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .cart {
+          position: relative;
+          .num {
+            height: 16px;
+            width: 16px;
+            border-radius: 10px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background: red;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
           }
         }
         .search {
