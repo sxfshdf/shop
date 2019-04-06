@@ -47,6 +47,7 @@
         // },
         autoplay: {
           delay: 3000,
+          disableOnInteraction: false,
         },
         navigation: {
           nextEl: '.swiper-button-next',

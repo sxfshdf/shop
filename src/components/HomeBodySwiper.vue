@@ -19,6 +19,7 @@
       var swiper = new Swiper('.body-swiper-container', {
         autoplay: {
           delay: 3000,
+          disableOnInteraction: false,
         },
         pagination: {
           el: '.swiper-pagination',
