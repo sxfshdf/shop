@@ -75,6 +75,11 @@
         <div class="right-title">02</div>
       </div>
     </section>
+    <div class="to-top" v-show="showTop" @click="toTop">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-totop"></use>
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -198,6 +203,29 @@
           height: 60px;
           width: 1px;
           background: #000;
+        }
+      }
+    }
+    .to-top {
+      position: fixed;
+      right: 40px;
+      z-index: 999;
+      bottom: 100px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s;
+      .icon {
+        height: 24px;
+        width: 24px;
+        color: #333;
+      }
+      &:hover {
+        background: #333;
+        border: 1px solid #333;
+        .icon {
+          color: #fff;
         }
       }
     }

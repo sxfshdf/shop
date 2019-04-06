@@ -17,9 +17,22 @@
           </svg>
           <span class="num">10</span>
         </div>
-        <div class="action user">
+        <div class="action user" v-if="!isLogin">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-user"></use>
+          </svg>
+        </div>
+        <div class="action user-login" v-if="isLogin">
+          <div class="user-image">
+            <img src="" alt="">
+          </div>
+          <div class="user-name">
+            sxfshdf
+          </div>
+        </div>
+        <div class="action exit">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-export"></use>
           </svg>
         </div>
       </div>
@@ -30,6 +43,12 @@
 <script>
   export default {
     name: "Header",
+    data() {
+      return {
+        isLogin: true
+      }
+    },
+
     mounted() {
       window.addEventListener('scroll', this.handleScroll)
     },
@@ -65,6 +84,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       .logo-wrapper {
 
       }
@@ -78,7 +98,7 @@
             width: 20px;
           }
         }
-        .user, .cart {
+        .user, .cart, .exit {
           height: 32px;
           width: 32px;
           display: flex;
@@ -123,6 +143,20 @@
             &::placeholder {
               color: #ccc;
             }
+          }
+        }
+        .user-login {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          .user-image {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            background: #ccc;
+          }
+          .user-name {
+            margin-left: 10px;
           }
         }
       }
