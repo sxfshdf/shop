@@ -4,18 +4,20 @@
     <main id="main">
       <router-view></router-view>
     </main>
-    <Footer id="footer"></Footer>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Header from './components/Header';
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 import './assets/js/svg.js';
 
 export default {
   name: 'app',
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>

@@ -17,6 +17,9 @@
     name: "HomeBodySwiper",
     mounted() {
       var swiper = new Swiper('.body-swiper-container', {
+        autoplay: {
+          delay: 3000,
+        },
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -39,7 +42,7 @@
       width: 420px;
       height: 240px;
       .swiper-slide {
-        background: #ddd;
+        background: #ccc;
       }
     }
     .swiper-pagination {

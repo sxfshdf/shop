@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header ref="header">
     <div class="head-container">
       <div class="logo-wrapper">
         <h2>SHOP</h2>
@@ -29,13 +29,35 @@
 
 <script>
   export default {
-    name: "Header"
+    name: "Header",
+    mounted() {
+      window.addEventListener('scroll', this.handleScroll)
+    },
+    methods: {
+      handleScroll() {
+        if(window.scrollY > 0) {
+          this.$refs.header.classList.add('active')
+        } else {
+          this.$refs.header.classList.remove('active')
+        }
+      }
+    }
   }
 </script>
 
 <style scoped lang="scss">
   header {
     height: 64px;
+    background: #fff;
+    transition: all 0.3s;
+    &.active {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
     .head-container {
       width: 1200px;
       height: 100%;
@@ -62,6 +84,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          cursor: pointer;
         }
         .cart {
           position: relative;

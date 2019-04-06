@@ -6,7 +6,7 @@ export default {
   name: "home",
   components: {
     HeadSwiper,
-    HomeBodySwiper
+    HomeBodySwiper,
   },
   mounted() {
 
