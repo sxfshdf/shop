@@ -2,7 +2,7 @@
   <footer>
     <div class="footer-container">
       <div class="title">
-        友情链接 :
+        链接 :
       </div>
       <div class="link">
         <ul>
